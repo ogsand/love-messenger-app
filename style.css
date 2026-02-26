@@ -97,3 +97,12 @@ a {
 #output button {
   background: #6c63ff;
 }
+
+.reset-btn {
+  background: #444;
+  margin-top: 10px;
+}
+
+.reset-btn:hover {
+  background: #222;
+}
