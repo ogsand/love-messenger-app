@@ -19,9 +19,25 @@ function generateLink() {
 
   output.innerHTML = `
     <p>Send this link to your lover:</p>
+
     <input type="text" id="linkBox" value="${link}" readonly>
+
     <button onclick="copyLink()">Copy Link 📋</button>
+
+    <button onclick="resetForm()" class="reset-btn">
+      Create New Message 🔄
+    </button>
   `;
+}
+
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+
+function resetForm() {
+  nameInput.value = "";
+  messageInput.value = "";
+  foodSelect.value = "";
+  output.innerHTML = "";
 }
 
 /* Show message if receiver opens link */
@@ -47,3 +63,4 @@ function copyLink() {
   navigator.clipboard.writeText(linkBox.value);
   alert("Link copied successfully! ❤️");
 }
+
